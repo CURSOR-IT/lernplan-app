@@ -1,0 +1,232 @@
+:root {
+  color-scheme: light;
+}
+
+body {
+  background: #f8fafc;
+  color: #0f172a;
+}
+
+.app-shell {
+  min-height: 100vh;
+  padding: 16px;
+}
+
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+  display: grid;
+  gap: 16px;
+}
+
+.card {
+  background: #fff;
+  border: 1px solid #e2e8f0;
+  border-radius: 24px;
+  box-shadow: 0 8px 30px rgba(15, 23, 42, 0.05);
+  padding: 18px;
+}
+
+.hero h1 {
+  margin: 0;
+  font-size: clamp(1.8rem, 5vw, 2.6rem);
+}
+
+.eyebrow {
+  margin: 0 0 6px 0;
+  color: #475569;
+  font-weight: 700;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.subtitle {
+  margin: 8px 0 0 0;
+  color: #475569;
+  line-height: 1.5;
+}
+
+.progress-row,
+.phase-header,
+.add-task-row {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.progress-row h2,
+.phase-header h2 {
+  margin: 0;
+  font-size: 1.05rem;
+}
+
+.progress-row p,
+.phase-header p,
+.progress-label {
+  margin: 4px 0 0 0;
+  color: #475569;
+}
+
+.progress-bar {
+  width: 100%;
+  height: 12px;
+  border-radius: 999px;
+  background: #e2e8f0;
+  overflow: hidden;
+  margin-top: 14px;
+}
+
+.progress-bar.small {
+  height: 8px;
+}
+
+.progress-fill {
+  height: 100%;
+  background: #0f172a;
+  border-radius: inherit;
+}
+
+.controls input {
+  flex: 1;
+  border: 1px solid #cbd5e1;
+  border-radius: 14px;
+  padding: 12px 14px;
+  min-width: 0;
+}
+
+.primary-btn,
+.secondary-btn,
+.chip,
+.delete-btn,
+.checkbox {
+  border: none;
+  cursor: pointer;
+}
+
+.primary-btn,
+.secondary-btn {
+  border-radius: 14px;
+  padding: 12px 14px;
+  font-weight: 600;
+}
+
+.primary-btn {
+  background: #0f172a;
+  color: #fff;
+}
+
+.secondary-btn {
+  background: #fff;
+  color: #0f172a;
+  border: 1px solid #cbd5e1;
+}
+
+.chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 14px;
+}
+
+.chip {
+  padding: 10px 14px;
+  border-radius: 999px;
+  background: #fff;
+  border: 1px solid #cbd5e1;
+}
+
+.chip.active {
+  background: #0f172a;
+  color: #fff;
+  border-color: #0f172a;
+}
+
+.phase-percent {
+  font-weight: 700;
+  color: #475569;
+}
+
+.task-list {
+  display: grid;
+  gap: 12px;
+  margin-top: 14px;
+}
+
+.task {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  gap: 12px;
+  align-items: start;
+  border: 1px solid #e2e8f0;
+  border-radius: 20px;
+  padding: 14px;
+}
+
+.task.done {
+  background: #ecfdf5;
+  border-color: #86efac;
+}
+
+.checkbox {
+  width: 28px;
+  height: 28px;
+  border-radius: 999px;
+  border: 1px solid #94a3b8;
+  background: #fff;
+  font-weight: 700;
+}
+
+.checkbox.checked {
+  background: #16a34a;
+  color: #fff;
+  border-color: #16a34a;
+}
+
+.task-content h3 {
+  margin: 0;
+  font-size: 1rem;
+}
+
+.task-content p {
+  margin: 6px 0 0 0;
+  color: #475569;
+  line-height: 1.45;
+}
+
+.task.done .task-content h3 {
+  text-decoration: line-through;
+  color: #64748b;
+}
+
+.delete-btn {
+  background: transparent;
+  color: #64748b;
+  font-size: 1rem;
+  padding: 4px;
+}
+
+@media (max-width: 640px) {
+  .app-shell {
+    padding: 12px;
+  }
+
+  .card {
+    padding: 16px;
+    border-radius: 20px;
+  }
+
+  .progress-row,
+  .phase-header,
+  .add-task-row {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .primary-btn,
+  .secondary-btn,
+  .controls input {
+    width: 100%;
+  }
+}
