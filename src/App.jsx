@@ -1,4 +1,5 @@
 import { useEffect, useMemo, useState } from 'react'
+import React from 'react'
 
 const initialTasks = [
   ["Monat 1 · Python", "Woche 1 – Variablen, Datentypen, Input/Output", "Begrüßungsprogramm, Taschenrechner, Alter-in-Tagen-Rechner"],
